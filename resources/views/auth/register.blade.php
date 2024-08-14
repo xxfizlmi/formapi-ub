@@ -5,7 +5,7 @@
             <div class=" flex flex-initial"><img src="{{asset('img/logo_formapi.ub.png')}}" alt="" width="300"
                     class="flex-initial"></div>
             <div class=" content-center flex-initial">
-                <form action="{{route('proseslogin')}}" method="post">
+                <form action="{{route('prosesRegister')}}" method="post">
                 @csrf
                     <div class="grid space-y-5 text-center text-white">
                         <h1>Register Account</h1>

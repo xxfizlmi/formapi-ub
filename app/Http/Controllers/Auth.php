@@ -11,16 +11,32 @@ class Auth extends Controller
     {
         return view("auth.login");
     }
-    public function proseslogin( Request $request)
+    public function proseslogin()
     {
-        var_dump($request->all());
+        return redirect()->intended("login");
     }
     public function register()
     {
         return view("auth.register");
     }  
-    public function forgotPassowrd()
+    public function prosesRegister()
+    {
+        return redirect()->intended("login");
+    }
+    public function forgotPassword()
     {
         return view("auth.forgot_password");
+    }
+    public function prosesForgotPassword()
+    {
+        return redirect()->intended("new-password");
+    }
+    public function newPassword()
+    {
+        return view("auth.new_password");
+    }
+    public function prosesNewPassword()
+    {
+        return redirect()->intended("login");
     }
 }

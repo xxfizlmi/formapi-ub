@@ -5,15 +5,18 @@
             <div class=" flex flex-initial"><img src="{{asset('img/logo_formapi.ub.png')}}" alt="" width="300"
                     class="flex-initial"></div>
             <div class=" content-center flex-initial">
-                <form action="{{route('prosesForgotPassword')}}" method="post">
+                <form action="{{route('prosesNewPassword')}}" method="post">
                 @csrf
                     <div class="grid space-y-5 text-center text-white">
-                        <h1>Forgot Password</h1>
+                        <h1>New Password</h1>
                         <div class="px-3  bg-white rounded-full">
-                            <input type="email" name="email" id="" placeholder="Email" class="py-1">
+                            <input type="password" name="passwordbaru" id="" placeholder="Password Baru" class="py-1">
+                        </div>
+                        <div class="px-3  bg-white rounded-full">
+                            <input type="password" name="passwordkonfirmasi" id="" placeholder="Password Konfirmasi" class="py-1">
                         </div>
                         <button class=" bg-sky-600 rounded-full p-1">Masuk</button>
-                        <a href="{{route("login")}}" class="text-white text-center">Kembali</a>
+                            <a href="{{route("login")}}" class="text-white text-center  bg-red-600 rounded-full p-1">Batal</a>
                     </div>
                 </form>
             </div>
